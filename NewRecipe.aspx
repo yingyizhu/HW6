@@ -8,61 +8,29 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
+    <div dir="auto">
     
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:db_yzhu16HW6_Recipe %>" DeleteCommand="DELETE FROM [yzhu16HW6_Recipe] WHERE [Recipe_Name] = @Recipe_Name" InsertCommand="INSERT INTO [yzhu16HW6_Recipe] ([Recipe_Name], [Submitted_By], [Ingredient#1], [Ingredient#2], [Ingredient#3], [Ingredient#4], [Ingredient#5], [Prepartion], [Notes]) VALUES (@Recipe_Name, @Submitted_By, @column1, @column2, @column3, @column4, @column5, @Prepartion, @Notes)" SelectCommand="SELECT * FROM [yzhu16HW6_Recipe]" UpdateCommand="UPDATE [yzhu16HW6_Recipe] SET [Submitted_By] = @Submitted_By, [Ingredient#1] = @column1, [Ingredient#2] = @column2, [Ingredient#3] = @column3, [Ingredient#4] = @column4, [Ingredient#5] = @column5, [Prepartion] = @Prepartion, [Notes] = @Notes WHERE [Recipe_Name] = @Recipe_Name">
-            <DeleteParameters>
-                <asp:Parameter Name="Recipe_Name" Type="String" />
-            </DeleteParameters>
-            <InsertParameters>
-                <asp:Parameter Name="Recipe_Name" Type="String" />
-                <asp:Parameter Name="Submitted_By" Type="String" />
-                <asp:Parameter Name="column1" Type="String" />
-                <asp:Parameter Name="column2" Type="String" />
-                <asp:Parameter Name="column3" Type="String" />
-                <asp:Parameter Name="column4" Type="String" />
-                <asp:Parameter Name="column5" Type="String" />
-                <asp:Parameter Name="Prepartion" Type="String" />
-                <asp:Parameter Name="Notes" Type="String" />
-            </InsertParameters>
-            <UpdateParameters>
-                <asp:Parameter Name="Submitted_By" Type="String" />
-                <asp:Parameter Name="column1" Type="String" />
-                <asp:Parameter Name="column2" Type="String" />
-                <asp:Parameter Name="column3" Type="String" />
-                <asp:Parameter Name="column4" Type="String" />
-                <asp:Parameter Name="column5" Type="String" />
-                <asp:Parameter Name="Prepartion" Type="String" />
-                <asp:Parameter Name="Notes" Type="String" />
-                <asp:Parameter Name="Recipe_Name" Type="String" />
-            </UpdateParameters>
+        <br />
+        <br />
+        <asp:HyperLink ID="HyperLink_Home" runat="server" NavigateUrl="~/default.aspx">Home</asp:HyperLink>
+&nbsp;
+        <asp:HyperLink ID="newrecipelink" runat="server" NavigateUrl="~/NewRecipe.aspx">New Recipe</asp:HyperLink>
+        &nbsp;
+        <asp:HyperLink ID="HyperLink_AU" runat="server" NavigateUrl="~/Aboutus.aspx">About Us</asp:HyperLink>
+&nbsp;
+        <asp:HyperLink ID="HyperLink_Contact" runat="server" NavigateUrl="~/Contact.aspx">Contact</asp:HyperLink>
+        <br />
+    
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:db_yzhu16HW6_Recipe %>" SelectCommand="SELECT * FROM [yzhu16HW6_Recipe]">
         </asp:SqlDataSource>
         <br />
-        <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="Recipe_Name" DataSourceID="SqlDataSource1" DefaultMode="Insert" Height="50px" Width="125px">
-            <Fields>
-                <asp:BoundField DataField="Recipe_Name" HeaderText="Recipe_Name" ReadOnly="True" SortExpression="Recipe_Name" />
-                <asp:BoundField DataField="Submitted_By" HeaderText="Submitted_By" SortExpression="Submitted_By" />
-                <asp:BoundField DataField="Ingredient#1" HeaderText="Ingredient#1" SortExpression="Ingredient#1" />
-                <asp:BoundField DataField="Ingredient#2" HeaderText="Ingredient#2" SortExpression="Ingredient#2" />
-                <asp:BoundField DataField="Ingredient#3" HeaderText="Ingredient#3" SortExpression="Ingredient#3" />
-                <asp:BoundField DataField="Ingredient#4" HeaderText="Ingredient#4" SortExpression="Ingredient#4" />
-                <asp:BoundField DataField="Ingredient#5" HeaderText="Ingredient#5" SortExpression="Ingredient#5" />
-                <asp:BoundField DataField="Prepartion" HeaderText="Prepartion" SortExpression="Prepartion" />
-                <asp:BoundField DataField="Notes" HeaderText="Notes" SortExpression="Notes" />
-                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowInsertButton="True" />
-            </Fields>
-        </asp:DetailsView>
-        <br />
-        <br />
-
-
-
         <asp:FormView ID="FormView1" runat="server" DataKeyNames="Recipe_Name" DataSourceID="SqlDataSource1" DefaultMode="Insert">
             <EditItemTemplate>
-            
+
             </EditItemTemplate>
             <InsertItemTemplate>
-                    <table>
+                Recipe_Name:
+                 <table>
 
                     <tr>
                         <td>
@@ -84,47 +52,47 @@
 
                     <tr>
                         <td>
-                            Ingredient#1
+                            Ingredient1
                         </td>
                         <td>
-                            <asp:TextBox ID="TextBox3" runat="server" Text='<%# Bind("[Ingredient#1]") %>' />
+                            <asp:TextBox ID="TextBox3" runat="server" Text='<%# Bind("[Ingredient1]")%>' />
                         </td>
                     </tr>
 
                     
                     <tr>
                         <td>
-                            Ingredient#2
+                            Ingredient2
                         </td>
                         <td>
-                            <asp:TextBox ID="TextBox4" runat="server" Text='<%# Bind("[Ingredient#2]") %>' />
+                            <asp:TextBox ID="TextBox4" runat="server" Text='<%# Bind("[Ingredient2]")%>' />
                         </td>
                     </tr>
 
                     <tr>
                         <td>
-                            Ingredient#3
+                            Ingredient3
                         </td>
                         <td>
-                            <asp:TextBox ID="TextBox5" runat="server" Text='<%# Bind("[Ingredient#3]")%>' />
-                        </td>
-                    </tr>
-
-                   <tr>
-                        <td>
-                            Ingredient#4
-                        </td>
-                        <td>
-                            <asp:TextBox ID="TextBox6" runat="server" Text='<%# Bind("[Ingredient#4]")%>' />
+                            <asp:TextBox ID="TextBox5" runat="server" Text='<%# Bind("[Ingredient3]")%>' />
                         </td>
                     </tr>
 
                    <tr>
                         <td>
-                            Ingredient#5
+                            Ingredient4
                         </td>
                         <td>
-                            <asp:TextBox ID="TextBox7" runat="server" Text='<%# Bind("[Ingredient#5]")%>' />
+                            <asp:TextBox ID="TextBox6" runat="server" Text='<%# Bind("[Ingredient4]")%>' />
+                        </td>
+                    </tr>
+
+                   <tr>
+                        <td>
+                            Ingredient5
+                        </td>
+                        <td>
+                            <asp:TextBox ID="TextBox7" runat="server" Text='<%# Bind("[Ingredient5]")%>' />
                         </td>
                     </tr>
                        
@@ -160,11 +128,14 @@
 
             </InsertItemTemplate>
             <ItemTemplate>
-               
+                
             </ItemTemplate>
         </asp:FormView>
-       
-    
+        <br />
+        <br />
+
+
+
     </div>
     </form>
 </body>

@@ -12,7 +12,16 @@
     
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:db_yzhu16HW6_Recipe %>" SelectCommand="SELECT * FROM [yzhu16HW6_Recipe]"></asp:SqlDataSource>
         <br />
+        Great Recipes<br />
+        Using 5 Ingedients or Less!<br />
+        <br />
+        <asp:HyperLink ID="HyperLink_Home" runat="server" BorderStyle="None" NavigateUrl="~/default.aspx">Home</asp:HyperLink>
+&nbsp;
         <asp:HyperLink ID="newrecipelink" runat="server" NavigateUrl="~/NewRecipe.aspx">New Recipe</asp:HyperLink>
+        &nbsp;
+        <asp:HyperLink ID="HyperLink_AU" runat="server" NavigateUrl="~/Aboutus.aspx">About Us</asp:HyperLink>
+&nbsp;
+        <asp:HyperLink ID="HyperLink_Contact" runat="server" NavigateUrl="~/Contact.aspx">Contact</asp:HyperLink>
         <br />
         <br />
     
