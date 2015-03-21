@@ -1,0 +1,26 @@
+﻿body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:black;
+    font-weight: bold;
+}
+
+#content {
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+ }
+
+h1 {
+    font-size :42px;
+}
+
+h2 {
+    font-size :20px;
+}
+
+#GridView1 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}
+

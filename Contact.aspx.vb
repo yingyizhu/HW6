@@ -11,9 +11,8 @@ Partial Class _default
         Dim msg As New MailMessage
         Dim client As New SmtpClient
 
-        Dim sendersName As String
+
         Dim sendersEmail As String
-        Dim sendersSubject As String
         Dim sendersMessage As String
 
 
@@ -25,7 +24,7 @@ Partial Class _default
         msg.To.Add("yingyi-zhu@uiowa.edu")  'destination email address
         msg.From = New MailAddress("ui.6k183@gmail.com")  'account used to send the email.
         msg.ReplyToList.Add(sendersEmail) 'set the senders email address as the "reply to" for easy of sending a response
-        msg.Subject = sendersSubject  'set the message subject line
+
         msg.Body = sendersMessage  'add the message body
         msg.IsBodyHtml = True
 

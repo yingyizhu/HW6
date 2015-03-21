@@ -4,22 +4,29 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <link rel="stylesheet" type="text/css" href="StyleSheet.css" media="screen"/>
+    <title>Recipe Details</title>
 </head>
-<body>
+<body style="text-align: left">
     <form id="form1" runat="server">
-    <div>
+    <div style="text-align: center">
     
         <br />
         <br />
-        <asp:HyperLink ID="HyperLink_Home" runat="server" NavigateUrl="~/default.aspx">Home</asp:HyperLink>
-&nbsp;
-        <asp:HyperLink ID="newrecipelink" runat="server" NavigateUrl="~/NewRecipe.aspx">New Recipe</asp:HyperLink>
-        &nbsp;
-        <asp:HyperLink ID="HyperLink_AU" runat="server" NavigateUrl="~/Aboutus.aspx">About Us</asp:HyperLink>
-&nbsp;
-        <asp:HyperLink ID="HyperLink_Contact" runat="server" NavigateUrl="~/Contact.aspx">Contact</asp:HyperLink>
-        <br />
+        <h1>Great Recipes</h1>
+
+        <h2>Using 5 Ingedients or Less!</h2>
+
+        <nav>
+            <asp:HyperLink ID="HyperLink1" runat="server" BorderStyle="None" NavigateUrl="~/default.aspx">Home</asp:HyperLink>
+    &nbsp;
+            <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/NewRecipe.aspx">New Recipe</asp:HyperLink>
+            &nbsp;
+            <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Aboutus.aspx">About Us</asp:HyperLink>
+    &nbsp;
+            <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Contact.aspx">Contact</asp:HyperLink>
+        </nav>
+
     
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:db_yzhu16HW6_Recipe %>" DeleteCommand="DELETE FROM [yzhu16HW6_Recipe] WHERE [Recipe_Name] = @Recipe_Name" InsertCommand="INSERT INTO [yzhu16HW6_Recipe] ([Recipe_Name], [Submitted_By], [Ingredient1], [Ingredient2], [Ingredient3], [Ingredient4], [Ingredient5], [Prepartion], [Notes]) VALUES (@Recipe_Name, @Submitted_By, @Ingredient1, @Ingredient2, @Ingredient3, @Ingredient4, @Ingredient5, @Prepartion, @Notes)" SelectCommand="SELECT * FROM [yzhu16HW6_Recipe] WHERE ([Recipe_Name] = @Recipe_Name)" UpdateCommand="UPDATE [yzhu16HW6_Recipe] SET [Submitted_By] = @Submitted_By, [Ingredient1] = @Ingredient1, [Ingredient2] = @Ingredient2, [Ingredient3] = @Ingredient3, [Ingredient4] = @Ingredient4, [Ingredient5] = @Ingredient5, [Prepartion] = @Prepartion, [Notes] = @Notes WHERE [Recipe_Name] = @Recipe_Name">
             <DeleteParameters>
