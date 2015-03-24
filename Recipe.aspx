@@ -60,8 +60,9 @@
         </asp:SqlDataSource>
         <asp:Label ID="lbl_deletedrecipe" runat="server"></asp:Label>
         <br />
+
         <br />
-        <asp:FormView ID="FormView1" runat="server" DataKeyNames="Recipe_Name" DataSourceID="SqlDataSource1">
+        <asp:FormView ID="FormViewRecipe" runat="server" DataKeyNames="Recipe_Name" DataSourceID="SqlDataSource1">
             <EditItemTemplate>
                 Recipe_Name:
                 <asp:Label ID="Recipe_NameLabel1" runat="server" Text='<%# Eval("Recipe_Name") %>' />
@@ -93,6 +94,7 @@
                 <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" />
                 &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
             </EditItemTemplate>
+
             <InsertItemTemplate>
                 Recipe_Name:
                 <asp:TextBox ID="Recipe_NameTextBox" runat="server" Text='<%# Bind("Recipe_Name") %>' />

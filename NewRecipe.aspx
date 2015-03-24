@@ -61,8 +61,9 @@
             <EditItemTemplate>
                 Recipe_Name:
                 <asp:Label ID="Recipe_NameLabel1" runat="server" Text='<%# Eval("Recipe_Name") %>' />
+                <br />
                 Submitted_By:
-                <td><asp:TextBox ID="Submitted_ByTextBox" runat="server" Text='<%# Bind("Submitted_By") %>' />
+                <asp:TextBox ID="Submitted_ByTextBox" runat="server" Text='<%# Bind("Submitted_By") %>' />
                 <br />
                 Ingredient1:
                 <asp:TextBox ID="Ingredient1TextBox" runat="server" Text='<%# Bind("Ingredient1") %>' />
@@ -90,6 +91,8 @@
             </EditItemTemplate>
             
             <InsertItemTemplate>
+
+                <InsertItemTemplate>
 
                  <tr> 
                  <td>
@@ -183,6 +186,8 @@
              
                 </td>
                 </tr>
+
+            </InsertItemTemplate>
 
             </InsertItemTemplate>
            

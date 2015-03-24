@@ -16,8 +16,6 @@
 
     <div style="text-align: center">
     
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:db_yzhu16HW6_Recipe %>" SelectCommand="SELECT * FROM [yzhu16HW6_Recipe]"></asp:SqlDataSource>
-       
         <h1>Great Recipes</h1>
 
         <h2>Using 5 Ingedients or Less!</h2>
@@ -38,10 +36,11 @@
 
         <div class="homepage">
 
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Recipe_Name" DataSourceID="SqlDataSource1" Height="138px" Width="581px" PageSize="100" style="text-align: center">
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:db_yzhu16HW6_Recipe %>" SelectCommand="SELECT * FROM [yzhu16HW6_Recipe]"></asp:SqlDataSource>
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Recipe_Name" DataSourceID="SqlDataSource1">
                 <Columns>
-                    <asp:BoundField DataField="Recipe_Name" HeaderText="Recipe Name" ReadOnly="True" SortExpression="Recipe_Name" />
-                    <asp:BoundField DataField="Submitted_By" HeaderText="Submitted By" SortExpression="Submitted_By" />
+                    <asp:BoundField DataField="Recipe_Name" HeaderText="Recipe_Name" ReadOnly="True" SortExpression="Recipe_Name" />
+                    <asp:BoundField DataField="Submitted_By" HeaderText="Submitted_By" SortExpression="Submitted_By" />
                     <asp:HyperLinkField DataNavigateUrlFields="Recipe_Name" DataNavigateUrlFormatString="Recipe.aspx?Recipe_Name={0}" Text="Select" />
                 </Columns>
             </asp:GridView>
