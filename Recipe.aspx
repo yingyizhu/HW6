@@ -61,20 +61,103 @@
         <asp:Label ID="lbl_deletedrecipe" runat="server"></asp:Label>
         <br />
         <br />
-        <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="Recipe_Name" DataSourceID="SqlDataSource1" Height="50px" Width="125px">
-            <Fields>
-                <asp:BoundField DataField="Recipe_Name" HeaderText="Recipe_Name" ReadOnly="True" SortExpression="Recipe_Name" />
-                <asp:BoundField DataField="Submitted_By" HeaderText="Submitted_By" SortExpression="Submitted_By" />
-                <asp:BoundField DataField="Ingredient1" HeaderText="Ingredient1" SortExpression="Ingredient1" />
-                <asp:BoundField DataField="Ingredient2" HeaderText="Ingredient2" SortExpression="Ingredient2" />
-                <asp:BoundField DataField="Ingredient3" HeaderText="Ingredient3" SortExpression="Ingredient3" />
-                <asp:BoundField DataField="Ingredient4" HeaderText="Ingredient4" SortExpression="Ingredient4" />
-                <asp:BoundField DataField="Ingredient5" HeaderText="Ingredient5" SortExpression="Ingredient5" />
-                <asp:BoundField DataField="Prepartion" HeaderText="Prepartion" SortExpression="Prepartion" />
-                <asp:BoundField DataField="Notes" HeaderText="Notes" SortExpression="Notes" />
-                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
-            </Fields>
-        </asp:DetailsView>
+        <asp:FormView ID="FormView1" runat="server" DataKeyNames="Recipe_Name" DataSourceID="SqlDataSource1">
+            <EditItemTemplate>
+                Recipe_Name:
+                <asp:Label ID="Recipe_NameLabel1" runat="server" Text='<%# Eval("Recipe_Name") %>' />
+                <br />
+                Submitted_By:
+                <asp:TextBox ID="Submitted_ByTextBox" runat="server" Text='<%# Bind("Submitted_By") %>' />
+                <br />
+                Ingredient1:
+                <asp:TextBox ID="Ingredient1TextBox" runat="server" Text='<%# Bind("Ingredient1") %>' />
+                <br />
+                Ingredient2:
+                <asp:TextBox ID="Ingredient2TextBox" runat="server" Text='<%# Bind("Ingredient2") %>' />
+                <br />
+                Ingredient3:
+                <asp:TextBox ID="Ingredient3TextBox" runat="server" Text='<%# Bind("Ingredient3") %>' />
+                <br />
+                Ingredient4:
+                <asp:TextBox ID="Ingredient4TextBox" runat="server" Text='<%# Bind("Ingredient4") %>' />
+                <br />
+                Ingredient5:
+                <asp:TextBox ID="Ingredient5TextBox" runat="server" Text='<%# Bind("Ingredient5") %>' />
+                <br />
+                Prepartion:
+                <asp:TextBox ID="PrepartionTextBox" runat="server" Text='<%# Bind("Prepartion") %>' />
+                <br />
+                Notes:
+                <asp:TextBox ID="NotesTextBox" runat="server" Text='<%# Bind("Notes") %>' />
+                <br />
+                <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" />
+                &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
+            </EditItemTemplate>
+            <InsertItemTemplate>
+                Recipe_Name:
+                <asp:TextBox ID="Recipe_NameTextBox" runat="server" Text='<%# Bind("Recipe_Name") %>' />
+                <br />
+                Submitted_By:
+                <asp:TextBox ID="Submitted_ByTextBox" runat="server" Text='<%# Bind("Submitted_By") %>' />
+                <br />
+                Ingredient1:
+                <asp:TextBox ID="Ingredient1TextBox" runat="server" Text='<%# Bind("Ingredient1") %>' />
+                <br />
+                Ingredient2:
+                <asp:TextBox ID="Ingredient2TextBox" runat="server" Text='<%# Bind("Ingredient2") %>' />
+                <br />
+                Ingredient3:
+                <asp:TextBox ID="Ingredient3TextBox" runat="server" Text='<%# Bind("Ingredient3") %>' />
+                <br />
+                Ingredient4:
+                <asp:TextBox ID="Ingredient4TextBox" runat="server" Text='<%# Bind("Ingredient4") %>' />
+                <br />
+                Ingredient5:
+                <asp:TextBox ID="Ingredient5TextBox" runat="server" Text='<%# Bind("Ingredient5") %>' />
+                <br />
+                Prepartion:
+                <asp:TextBox ID="PrepartionTextBox" runat="server" Text='<%# Bind("Prepartion") %>' />
+                <br />
+                Notes:
+                <asp:TextBox ID="NotesTextBox" runat="server" Text='<%# Bind("Notes") %>' />
+                <br />
+                <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" />
+                &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
+            </InsertItemTemplate>
+            <ItemTemplate>
+                Recipe_Name:
+                <asp:Label ID="Recipe_NameLabel" runat="server" Text='<%# Eval("Recipe_Name") %>' />
+                <br />
+                Submitted_By:
+                <asp:Label ID="Submitted_ByLabel" runat="server" Text='<%# Bind("Submitted_By") %>' />
+                <br />
+                Ingredient1:
+                <asp:Label ID="Ingredient1Label" runat="server" Text='<%# Bind("Ingredient1") %>' />
+                <br />
+                Ingredient2:
+                <asp:Label ID="Ingredient2Label" runat="server" Text='<%# Bind("Ingredient2") %>' />
+                <br />
+                Ingredient3:
+                <asp:Label ID="Ingredient3Label" runat="server" Text='<%# Bind("Ingredient3") %>' />
+                <br />
+                Ingredient4:
+                <asp:Label ID="Ingredient4Label" runat="server" Text='<%# Bind("Ingredient4") %>' />
+                <br />
+                Ingredient5:
+                <asp:Label ID="Ingredient5Label" runat="server" Text='<%# Bind("Ingredient5") %>' />
+                <br />
+                Prepartion:
+                <asp:Label ID="PrepartionLabel" runat="server" Text='<%# Bind("Prepartion") %>' />
+                <br />
+                Notes:
+                <asp:Label ID="NotesLabel" runat="server" Text='<%# Bind("Notes") %>' />
+                <br />
+                <asp:LinkButton ID="EditButton" runat="server" CausesValidation="False" CommandName="Edit" Text="Edit" />
+                &nbsp;<asp:LinkButton ID="DeleteButton" runat="server" CausesValidation="False" CommandName="Delete" Text="Delete" />
+                &nbsp;<asp:LinkButton ID="NewButton" runat="server" CausesValidation="False" CommandName="New" Text="New" />
+            </ItemTemplate>
+        </asp:FormView>
+        <br />
     
     </div>
     </form>

@@ -2,6 +2,7 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color:black;
     font-weight: bold;
+    background-color :#E6F5FA;
 }
 
 #content {
@@ -18,9 +19,18 @@ h2 {
     font-size :20px;
 }
 
+h3 {
+    font-size :35px;font-family:Arial ;font-style :italic;
+}
+
 #GridView1 {
     margin-left: auto;
     margin-right: auto;
     width: 30%;
 }
 
+#FormView1 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}
