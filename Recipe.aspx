@@ -65,7 +65,7 @@
                 <asp:Parameter Name="Recipe_Name" Type="String" />
             </UpdateParameters>
         </asp:SqlDataSource>
-        <asp:FormView ID="FormViewRecipe" runat="server" DataKeyNames="Recipe_Name" DataSourceID="SqlDataSource1" Height="200px" Width="217px">
+        <asp:FormView ID="FormViewRecipe" runat="server" DataKeyNames="Recipe_Name" CssClass="Rfromview" DataSourceID="SqlDataSource1" Height="200px" Width="287px">
             <EditItemTemplate>
                 <tr><td>Recipe_Name:</td><td>
                 <asp:Label ID="Recipe_NameLabel1" runat="server" Text='<%# Eval("Recipe_Name") %>' />
@@ -140,45 +140,47 @@
 
             <ItemTemplate>
 
-                <tr><td>Recipe_Name:</td><td>
+                <tr><td style="background-color:#F08080; text-align :right;">Recipe_Name:</td><td style="background-color:none; text-align :left;">
                 <asp:Label ID="Recipe_NameLabel" runat="server" Text='<%# Eval("Recipe_Name") %>' />
                 </td></tr>
 
-                <tr><td>Submitted_By:</td><td>
+                <tr><td style="background-color:#F08080; text-align :right;">Submitted_By:</td><td style="background-color:none; text-align :left;">
                 <asp:Label ID="Submitted_ByLabel" runat="server" Text='<%# Bind("Submitted_By") %>' />
                 </td></tr>
                 
-                <tr><td>Ingredient1:</td><td>
+                <tr><td style="background-color:#F08080; text-align :right;">Ingredient1:</td><td style="background-color:none; text-align :left;">
                 <asp:Label ID="Ingredient1Label" runat="server" Text='<%# Bind("Ingredient1") %>' />
                 </td></tr>
                 
-                <tr><td>Ingredient2:</td><td>
+                <tr><td style="background-color:#F08080; text-align :right;">Ingredient2:</td><td style="background-color:none; text-align :left;">
                 <asp:Label ID="Ingredient2Label" runat="server" Text='<%# Bind("Ingredient2") %>' />
                 </td></tr>
 
-                <tr><td>Ingredient3:</td><td>
+                <tr><td style="background-color:#F08080; text-align :right;">Ingredient3:</td><td style="background-color:none; text-align :left;">
                 <asp:Label ID="Ingredient3Label" runat="server" Text='<%# Bind("Ingredient3") %>' />
                 </td></tr>
 
-                <tr><td>Ingredient4:</td><td>
+                <tr><td style="background-color:#F08080; text-align :right;">Ingredient4:</td><td style="background-color:none; text-align :left;">
                 <asp:Label ID="Ingredient4Label" runat="server" Text='<%# Bind("Ingredient4") %>' />
                 </td></tr>
 
-                <tr><td>Ingredient5:</td><td>
+                <tr><td style="background-color:#F08080; text-align :right;">Ingredient5:</td><td style="background-color:none; text-align :left;">
                 <asp:Label ID="Ingredient5Label" runat="server" Text='<%# Bind("Ingredient5") %>' />
                </td></tr>
 
-                <tr><td>Prepartion:</td><td>
+                <tr><td style="background-color:#F08080; text-align :right;">Prepartion:</td><td style="background-color:none; text-align :left;">
                 <asp:Label ID="PrepartionLabel" runat="server" Text='<%# Bind("Prepartion") %>' />
                 </td></tr>
 
-                <tr><td>Notes:</td><td>
+                <tr><td style="background-color:#F08080; text-align :right;">Notes:</td><td style="background-color:none; text-align :left;">
                 <asp:Label ID="NotesLabel" runat="server" Text='<%# Bind("Notes") %>' />
                 </td></tr>
 
-                <tr><td  style="text-align :center; padding-left :10 px; "><asp:LinkButton ID="EditButton" runat="server" CausesValidation="False" CommandName="Edit" Text="Edit" />
+                <div id="bottonRecipe">
+                <tr><td  style="text-align :center; padding-left :10px;"><asp:LinkButton ID="EditButton" runat="server" CausesValidation="False" CommandName="Edit" Text="Edit" />
                 &nbsp&nbsp&nbsp<asp:LinkButton ID="DeleteButton" runat="server" CausesValidation="False" CommandName="Delete" Text="Delete" />
                 </td></tr>
+                </div>
             </ItemTemplate>
         </asp:FormView>
         <br />

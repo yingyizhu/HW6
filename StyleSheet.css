@@ -2,7 +2,7 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color:black;
     font-weight: bold;
-    background-color :#E6F5FA;
+    background-color :#D2B48C;
 }
 
 #content {
@@ -26,21 +26,55 @@ h3 {
 #GridView1 {
     margin-left: auto;
     margin-right: auto;
-    width: 30%;
-}
+    }
 
 #FormView1 {
     margin-left: auto;
     margin-right: auto;
-    width: 30%;
+    width: 80%;
 }
 
 #FormViewRecipe {
     margin-left: auto;
     margin-right: auto;
-    width: 30%;
-}
+    }
 
 .index {
     text-decoration: none;
+}
+
+.cssgirdview td  
+ { 
+ padding:10px;  
+ color:#FFFFFF;  
+ background-color:#F08080;  
+ border: solid 3px #FFFFFF; 
+ text-align :center ;  
+ } 
+
+.cssgirdview th  
+ { 
+ padding:10px;  
+ color:#696969 ;  
+ background-color:#FFFF99 ; 
+ text-align :center ;  
+ border: solid 3px #FFFFFF; 
+}
+
+.NRfromview th{
+   
+}
+.Rfromview tr {
+    padding:10px;
+   
+}
+
+#bottonRecipe {
+ background-color:none;
+
+}
+
+.validationerror {
+    color :red;
+    font-weight :bold ;
 }
