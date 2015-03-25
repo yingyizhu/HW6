@@ -39,13 +39,13 @@
         <h2>Using 5 Ingedients or Less!</h2>
 
         <nav>
-            <asp:HyperLink ID="HyperLink_Home" runat="server" BorderStyle="None" NavigateUrl="~/default.aspx">Home</asp:HyperLink>
+            <asp:HyperLink ID="HyperLink_Home" runat="server" style="text-decoration:none" BorderStyle="None" NavigateUrl="~/default.aspx">Home</asp:HyperLink>
     &nbsp;
-            <asp:HyperLink ID="newrecipelink" runat="server" NavigateUrl="~/NewRecipe.aspx">New Recipe</asp:HyperLink>
+            <asp:HyperLink ID="newrecipelink" runat="server" style="text-decoration:none" NavigateUrl="~/NewRecipe.aspx">New Recipe</asp:HyperLink>
             &nbsp;
-            <asp:HyperLink ID="HyperLink_AU" runat="server" NavigateUrl="~/Aboutus.aspx">About Us</asp:HyperLink>
+            <asp:HyperLink ID="HyperLink_AU" runat="server" style="text-decoration:none" NavigateUrl="~/Aboutus.aspx">About Us</asp:HyperLink>
     &nbsp;
-            <asp:HyperLink ID="HyperLink_Contact" runat="server" NavigateUrl="~/Contact.aspx">Contact</asp:HyperLink>
+            <asp:HyperLink ID="HyperLink_Contact" runat="server" style="text-decoration:none" NavigateUrl="~/Contact.aspx">Contact</asp:HyperLink>
             <br />
             <br />
         </nav>

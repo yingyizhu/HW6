@@ -34,3 +34,13 @@ h3 {
     margin-right: auto;
     width: 30%;
 }
+
+#FormViewRecipe {
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+}
+
+.index {
+    text-decoration: none;
+}
