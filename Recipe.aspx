@@ -6,6 +6,9 @@
 <head runat="server">
     <link rel="stylesheet" type="text/css" href="StyleSheet.css" media="screen"/>
     <title>Recipe Details</title>
+    <style type="text/css">
+        .Rfromview {}
+    </style>
 </head>
 <body style="text-align: left">
     <form id="form1" runat="server">
@@ -67,43 +70,81 @@
         </asp:SqlDataSource>
         <asp:FormView ID="FormViewRecipe" runat="server" DataKeyNames="Recipe_Name" CssClass="Rfromview" DataSourceID="SqlDataSource1" Height="200px" Width="287px">
             <EditItemTemplate>
-                <tr><td>Recipe_Name:</td><td>
-                <asp:Label ID="Recipe_NameLabel1" runat="server" Text='<%# Eval("Recipe_Name") %>' />
-             </td></tr>
-                
-                <tr><td>Submitted_By:</td><td>
-                <asp:TextBox ID="Submitted_ByTextBox" runat="server" Text='<%# Bind("Submitted_By") %>' />
-              </td></tr>
-                
-                <tr><td>Ingredient1:</td><td>
-                <asp:TextBox ID="Ingredient1TextBox" runat="server" Text='<%# Bind("Ingredient1") %>' />
-              </td></tr>
+                Recipe Name:</td><td style="background-color:none; text-align :left;">
+                    <asp:Label ID="Recipe_NameLabel1" runat="server" Text='<%# Eval("Recipe_Name")%>' />
+                </td>
+                <tr>
 
-                <tr><td>Ingredient2:</td><td>
+                </tr>
+                
+                <tr>
+                    <td style="background-color:#F08080; text-align :right;">
+                        <br />
+                        Submitted By:</td>
+                    <td style="background-color:none; text-align :left;">
+                        <asp:TextBox ID="RSubmitted_ByTextBox" runat="server" Text='<%# Bind("Submitted_By") %>' />
+                    </td>
+                </tr>
+
+                <asp:RequiredFieldValidator ID="RsubmitbyValidator" runat="server" ControlToValidate="RSubmitted_ByTextBox" CssClass="validationerror" ErrorMessage="Please enter your name!"></asp:RequiredFieldValidator>
+                
+                <tr>
+
+                   <td style="text-align :right; background-color: #F08080;"> 
+                   </td>
+                    <td style="background-color:none; text-align :left;">
+                        <br />
+                        Ingredient#1:</td>
+                    <td>
+                        <asp:TextBox ID="RIngredient1TextBox" runat="server" Text='<%# Bind("Ingredient1") %>' />
+                    </td>
+                </tr>
+                
+                <asp:RequiredFieldValidator ID="RIngredientValidator" runat="server" ControlToValidate="RIngredient1TextBox" CssClass="validationerror" ErrorMessage="Please enter at least one ingredient!"></asp:RequiredFieldValidator>
+
+                <tr><td style="background-color:#F08080; text-align :right;"></td>
+                    <td style="background-color:none; text-align :left;">Ingredient#2:</td>
+                    <td>
                 <asp:TextBox ID="Ingredient2TextBox" runat="server" Text='<%# Bind("Ingredient2") %>' />
               </td></tr>
   
-                <tr><td>Ingredient3:</td><td>
+                <tr><td style="background-color:#F08080; text-align :right;">
+                    <br />
+                    Ingredient#3:</td><td style="background-color:none; text-align :left;">
                 <asp:TextBox ID="Ingredient3TextBox" runat="server" Text='<%# Bind("Ingredient3") %>' />
               </td></tr>
 
-                <tr><td>Ingredient4:</td><td>
+                <tr><td style="background-color:#F08080; text-align :right;">
+                    <br />
+                    Ingredient#4:</td><td style="background-color:none; text-align :left;">
                 <asp:TextBox ID="Ingredient4TextBox" runat="server" Text='<%# Bind("Ingredient4") %>' />
               </td></tr>
 
-                <tr><td>Ingredient5:</td><td>
+                <tr><td style="background-color:#F08080; text-align :right;">
+                    <br />
+                    Ingredient#5:</td><td style="background-color:none; text-align :left;">
                 <asp:TextBox ID="Ingredient5TextBox" runat="server" Text='<%# Bind("Ingredient5") %>' />
               </td></tr>
 
-                <tr><td>Prepartion:</td><td>
-                <asp:TextBox ID="PrepartionTextBox" runat="server" Text='<%# Bind("Prepartion") %>' />
-              </td></tr>
+                <tr>
+                    <td style="background-color:#F08080; text-align :right;">
+                        <br />
+                        Prepartion:</td><td style="background-color:none; text-align :left;">
+                    <asp:TextBox ID="RPrepartionTextBox" runat="server" Text='<%# Bind("Prepartion") %>' />
+                    </td>
 
-                <tr><td>Notes:</td><td>
+                </tr>
+
+                <asp:RequiredFieldValidator ID="RPrepValidator" runat="server" ControlToValidate="RPrepartionTextBox" CssClass="validationerror" ErrorMessage="Please descripe prepartion!"></asp:RequiredFieldValidator>
+                <br />
+  
+                <tr><td style="background-color:#F08080; text-align :right;"></td>
+                    <td style="background-color:none; text-align :left;">Notes:</td>
+                    <td>
                 <asp:TextBox ID="NotesTextBox" runat="server" Text='<%# Bind("Notes") %>' />
               </td></tr>
 
-                <tr><td><asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Save" />
+                <tr><td style="border :none;"><asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Save" />
                 </td></tr>
             </EditItemTemplate>
             <InsertItemTemplate>
@@ -139,32 +180,32 @@
             </InsertItemTemplate>
 
             <ItemTemplate>
-
-                <tr><td style="background-color:#F08080; text-align :right;">Recipe_Name:</td><td style="background-color:none; text-align :left;">
+          
+                <tr><td style="background-color:#F08080; text-align :right;">Recipe Name:</td><td style="background-color:none; text-align :left;">
                 <asp:Label ID="Recipe_NameLabel" runat="server" Text='<%# Eval("Recipe_Name") %>' />
                 </td></tr>
 
-                <tr><td style="background-color:#F08080; text-align :right;">Submitted_By:</td><td style="background-color:none; text-align :left;">
+                <tr><td style="background-color:#F08080; text-align :right;">Submitted By:</td><td style="background-color:none; text-align :left;">
                 <asp:Label ID="Submitted_ByLabel" runat="server" Text='<%# Bind("Submitted_By") %>' />
                 </td></tr>
                 
-                <tr><td style="background-color:#F08080; text-align :right;">Ingredient1:</td><td style="background-color:none; text-align :left;">
+                <tr><td style="background-color:#F08080; text-align :right;">Ingredient#1:</td><td style="background-color:none; text-align :left;">
                 <asp:Label ID="Ingredient1Label" runat="server" Text='<%# Bind("Ingredient1") %>' />
                 </td></tr>
                 
-                <tr><td style="background-color:#F08080; text-align :right;">Ingredient2:</td><td style="background-color:none; text-align :left;">
+                <tr><td style="background-color:#F08080; text-align :right;">Ingredient#2:</td><td style="background-color:none; text-align :left;">
                 <asp:Label ID="Ingredient2Label" runat="server" Text='<%# Bind("Ingredient2") %>' />
                 </td></tr>
 
-                <tr><td style="background-color:#F08080; text-align :right;">Ingredient3:</td><td style="background-color:none; text-align :left;">
+                <tr><td style="background-color:#F08080; text-align :right;">Ingredient#3:</td><td style="background-color:none; text-align :left;">
                 <asp:Label ID="Ingredient3Label" runat="server" Text='<%# Bind("Ingredient3") %>' />
                 </td></tr>
 
-                <tr><td style="background-color:#F08080; text-align :right;">Ingredient4:</td><td style="background-color:none; text-align :left;">
+                <tr><td style="background-color:#F08080; text-align :right;">Ingredient#4:</td><td style="background-color:none; text-align :left;">
                 <asp:Label ID="Ingredient4Label" runat="server" Text='<%# Bind("Ingredient4") %>' />
                 </td></tr>
 
-                <tr><td style="background-color:#F08080; text-align :right;">Ingredient5:</td><td style="background-color:none; text-align :left;">
+                <tr><td style="background-color:#F08080; text-align :right;">Ingredient#5:</td><td style="background-color:none; text-align :left;">
                 <asp:Label ID="Ingredient5Label" runat="server" Text='<%# Bind("Ingredient5") %>' />
                </td></tr>
 
@@ -177,9 +218,11 @@
                 </td></tr>
 
                 <div id="bottonRecipe">
-                <tr><td  style="text-align :center; padding-left :10px;"><asp:LinkButton ID="EditButton" runat="server" CausesValidation="False" CommandName="Edit" Text="Edit" />
+                <tr><td  style="text-align :center; padding-left :10px;border:none ;"><asp:LinkButton ID="EditButton" runat="server" CausesValidation="False" CommandName="Edit" Text="Edit" />
                 &nbsp&nbsp&nbsp<asp:LinkButton ID="DeleteButton" runat="server" CausesValidation="False" CommandName="Delete" Text="Delete" />
-                </td></tr>
+                </td>
+
+                </tr>
                 </div>
             </ItemTemplate>
         </asp:FormView>

@@ -31,7 +31,8 @@ h3 {
 #FormView1 {
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
+    width: 100%;
+   
 }
 
 #FormViewRecipe {
@@ -61,13 +62,16 @@ h3 {
  border: solid 3px #FFFFFF; 
 }
 
-.NRfromview th{
-   
+.NRfromview td{
+
+   border :solid 3px #FFFFFF;
+   text-align : center ;
 }
-.Rfromview tr {
-    padding:10px;
-   
+.Rfromview td {
+   text-align :right;
+   border :solid 3px #FFFFFF;
 }
+
 
 #bottonRecipe {
  background-color:none;
@@ -78,3 +82,4 @@ h3 {
     color :red;
     font-weight :bold ;
 }
+

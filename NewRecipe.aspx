@@ -56,7 +56,7 @@
                 <asp:Parameter Name="Recipe_Name" Type="String" />
             </UpdateParameters>
         </asp:SqlDataSource>
-        <asp:FormView ID="FormView1" runat="server" DataKeyNames="Recipe_Name" DataSourceID="SqlDataSource1" DefaultMode="Insert" CssClass="NRfromview" style="text-align: left" Height="219px" Width="223px">
+        <asp:FormView ID="FormView1" runat="server" DataKeyNames="Recipe_Name" DataSourceID="SqlDataSource1" DefaultMode="Insert" CssClass="NRfromview" style="text-align: left" Height="210px" Width="657px">
             
             <EditItemTemplate>
                 Recipe_Name:
@@ -91,6 +91,9 @@
             </EditItemTemplate>
             
                       
+            <HeaderStyle BorderStyle="None" />
+            
+                      
             <InsertItemTemplate>
 
                  <tr > 
@@ -101,21 +104,21 @@
                      <asp:TextBox ID="Recipe_NameTextBox" runat="server" Text='<%# Bind("Recipe_Name") %>' />
                  </td>
 
-                 <td style="text-align :left;"> 
+                 <td style="text-align :left;border:none ;"> 
                      <asp:RequiredFieldValidator ID="RnameFieldValidator" runat="server" ErrorMessage="Please enter the recipe name!" CssClass="validationerror" ControlToValidate="Recipe_NameTextBox"></asp:RequiredFieldValidator>
                  </td>
 
                  </tr>
 
                  <tr> 
-                 <td style="background-color:#F08080";"text-align :right;">
+                 <td style="background-color:#F08080; text-align :right;">
                  Submitted By:
                  </td>
                  <td style="text-align :left;"> 
                  <asp:TextBox ID="tb_Submitted_ByTextBox" runat="server" Text='<%# Bind("Submitted_By") %>' />
                  </td>
 
-                 <td style="text-align :left;"> 
+                 <td style="text-align :left;border:none ;"> 
                      <asp:RequiredFieldValidator ID="submitbyValidator" runat="server" ErrorMessage="Please enter your name!" CssClass="validationerror" ControlToValidate="tb_Submitted_ByTextBox"></asp:RequiredFieldValidator>
                  </td>
 
@@ -129,7 +132,7 @@
                  <asp:TextBox ID="Ingredient1TextBox" runat="server" Text='<%# Bind("Ingredient1") %>' />
                  </td>
 
-                 <td style="text-align :left;"> 
+                 <td style="text-align :left;border:none ;"> 
                  <asp:RequiredFieldValidator ID="IngredientValidator" runat="server" ErrorMessage="Please enter at least one ingredient!" CssClass="validationerror" ControlToValidate="Ingredient1TextBox"></asp:RequiredFieldValidator>
                  </td>
 
@@ -183,7 +186,7 @@
                  <asp:TextBox ID="PrepartionTextBox" runat="server" Text='<%# Bind("Prepartion") %>' />
                  </td>
 
-                  <td style="text-align :left;"> 
+                  <td style="text-align :left;border:none ;"> 
                   <asp:RequiredFieldValidator ID="PrepValidator" runat="server" ErrorMessage="Please descripe prepartion!" CssClass="validationerror" ControlToValidate="PrepartionTextBox"></asp:RequiredFieldValidator>
                  </td>
 
@@ -201,7 +204,7 @@
 
          
                 <tr>
-                <td style="text-align :center; padding-left :170px; " >
+                <td style="text-align :center; padding-left :170px;border:none ; " >
                  <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Save" />
              
                 </td>
