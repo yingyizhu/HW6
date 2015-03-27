@@ -29,10 +29,14 @@ h3 {
     }
 
 #FormView1 {
+    width: 100%;
+}
+
+#fromviewcontent{
     margin-left: auto;
     margin-right: auto;
-    width: 100%;
-   
+    width: 23%;
+    color:#FFFFFF;
 }
 
 #FormViewRecipe {

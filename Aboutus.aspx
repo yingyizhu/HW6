@@ -35,7 +35,7 @@
         <h3>Lorem ipsum</h3>
 
         <br />
-        <p style="text-align: left; border:solid white; width:60%; margin :auto ;font-weight :normal ;">
+        <p style="text-align: left; border:solid none ; width:60%; margin :auto ;font-weight :normal ;margin-bottom:80px;">
 "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
 "There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."
  <br />
@@ -54,8 +54,6 @@ Vivamus lobortis ultricies purus, ac convallis massa volutpat scelerisque. Nunc 
  <br />
 Phasellus mattis sodales mauris, nec varius quam pharetra sed. Vivamus id enim nec dolor consectetur molestie. Nam eu erat accumsan, porttitor metus ac, tincidunt nibh. Sed egestas ut massa eu ullamcorper. Quisque leo ligula, commodo eget erat vitae, rhoncus vulputate nibh. Sed ultricies augue eu mauris tincidunt blandit. Etiam tempor neque dolor, a posuere nunc cursus id. Quisque mi tellus, luctus quis turpis a, egestas egestas nulla. Maecenas rhoncus turpis sit amet fringilla tristique. Proin sit amet nulla ipsum. Pellentesque id finibus nisi. Vestibulum vitae enim justo. Maecenas interdum, ex eu sodales semper, ipsum sem viverra nibh, sit amet viverra lorem dui id elit. Integer tincidunt luctus lectus, in ornare dolor ultrices et. Curabitur aliquet laoreet mauris, et gravida orci mattis id.
  <br />
- <br />
-Generated 5 paragraphs, 443 words, 2984 bytes of Lorem Ipsum
 
     </p>
     </form>
