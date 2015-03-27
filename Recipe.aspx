@@ -80,7 +80,7 @@
                     Recipe Name:</td>
                 
                     <td style="background-color:none; text-align :left;"> 
-                    <asp:TextBox ID="RRecipe_NameTextbox" runat="server" Text='<%# Bind("Recipe_Name") %>' />
+                    <asp:TextBox ID="RRecipe_NameTextbox" runat="server" Text='<%# Eval("Recipe_Name")%>' />
                     </td>
 
                     <td style="background-color:none; border:none ; text-align :left;"> 
@@ -224,39 +224,39 @@
 
             <ItemTemplate>
           
-                <tr><td style="background-color:#F08080; text-align :right;">Recipe Name:</td><td style="background-color:none; text-align :left;">
+                <tr><td style="background-color:#F08080;  text-align :right;">Recipe Name:</td><td style="background-color:none; color:#696969;text-align :left;">
                 <asp:Label ID="Recipe_NameLabel" runat="server" Text='<%# Eval("Recipe_Name") %>' />
                 </td></tr>
 
-                <tr><td style="background-color:#F08080; text-align :right;">Submitted By:</td><td style="background-color:none; text-align :left;">
+                <tr><td style="background-color:#F08080; text-align :right;">Submitted By:</td><td style="background-color:none; color:#696969;text-align :left;">
                 <asp:Label ID="Submitted_ByLabel" runat="server" Text='<%# Bind("Submitted_By") %>' />
                 </td></tr>
                 
-                <tr><td style="background-color:#F08080; text-align :right;">Ingredient#1:</td><td style="background-color:none; text-align :left;">
+                <tr><td style="background-color:#F08080; text-align :right;">Ingredient#1:</td><td style="background-color:none; color:#696969;text-align :left;">
                 <asp:Label ID="Ingredient1Label" runat="server" Text='<%# Bind("Ingredient1") %>' />
                 </td></tr>
                 
-                <tr><td style="background-color:#F08080; text-align :right;">Ingredient#2:</td><td style="background-color:none; text-align :left;">
+                <tr><td style="background-color:#F08080;text-align :right;">Ingredient#2:</td><td style="background-color:none;color:#696969; text-align :left;">
                 <asp:Label ID="Ingredient2Label" runat="server" Text='<%# Bind("Ingredient2") %>' />
                 </td></tr>
 
-                <tr><td style="background-color:#F08080; text-align :right;">Ingredient#3:</td><td style="background-color:none; text-align :left;">
+                <tr><td style="background-color:#F08080; text-align :right;">Ingredient#3:</td><td style="background-color:none; color:#696969;text-align :left;">
                 <asp:Label ID="Ingredient3Label" runat="server" Text='<%# Bind("Ingredient3") %>' />
                 </td></tr>
 
-                <tr><td style="background-color:#F08080; text-align :right;">Ingredient#4:</td><td style="background-color:none; text-align :left;">
+                <tr><td style="background-color:#F08080; text-align :right;">Ingredient#4:</td><td style="background-color:none;color:#696969; text-align :left;">
                 <asp:Label ID="Ingredient4Label" runat="server" Text='<%# Bind("Ingredient4") %>' />
                 </td></tr>
 
-                <tr><td style="background-color:#F08080; text-align :right;">Ingredient#5:</td><td style="background-color:none; text-align :left;">
+                <tr><td style="background-color:#F08080; text-align :right;">Ingredient#5:</td><td style="background-color:none;color:#696969; text-align :left;">
                 <asp:Label ID="Ingredient5Label" runat="server" Text='<%# Bind("Ingredient5") %>' />
                </td></tr>
 
-                <tr><td style="background-color:#F08080; text-align :right;">Prepartion:</td><td style="background-color:none; text-align :left;">
+                <tr><td style="background-color:#F08080; text-align :right;">Prepartion:</td><td style="background-color:none;color:#696969; text-align :left;">
                 <asp:Label ID="PrepartionLabel" runat="server" Text='<%# Bind("Prepartion") %>' />
                 </td></tr>
 
-                <tr><td style="background-color:#F08080; text-align :right;">Notes:</td><td style="background-color:none; text-align :left;">
+                <tr><td style="background-color:#F08080; text-align :right;">Notes:</td><td style="background-color:none; color:#696969;text-align :left;">
                 <asp:Label ID="NotesLabel" runat="server" Text='<%# Bind("Notes") %>' />
                 </td></tr>
 

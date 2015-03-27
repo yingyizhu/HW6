@@ -4,11 +4,9 @@ Partial Class Default2
 
     Protected Sub FormViewRecipe_ItemDeleted(sender As Object, e As FormViewDeletedEventArgs) Handles FormViewRecipe.ItemDeleted
 
-        Dim deletedrecipe As String = e.Values("Recipe_Name").ToString()
+        lbl_deletedrecipe.Text = "The recipe has been deleted."
 
-        lbl_deletedrecipe.Text = deletedrecipe & "has been deteted from the database."
-
-        Response.AddHeader("REFRESH", "3;URL=./Default.aspx")
+        Response.AddHeader("REFRESH", "2;URL=./Default.aspx")
 
     End Sub
 
